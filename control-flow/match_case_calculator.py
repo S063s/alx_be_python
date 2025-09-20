@@ -3,7 +3,7 @@ second = 0
 number = first
 number = second
 
-operation = input("Enter operation (+, -, *, /): ")
+operation = input("Enter operation (+/ -/ */ / /): ")
 first = float(input("Enter first number: "))
 second = float(input("Enter second number: "))
 
