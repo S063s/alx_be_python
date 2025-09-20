@@ -3,9 +3,9 @@ second = 0
 number = first
 number = second
 
-operation = input("choose the operation (+/ -/ */ / /): ")
 first = float(input("Enter first number: "))
 second = float(input("Enter second number: "))
+operation = input("choose the operation (+ , - , * , /): ")
 
 match operation:
     case "+":
