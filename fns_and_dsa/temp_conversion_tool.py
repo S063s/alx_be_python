@@ -1,7 +1,7 @@
-def fahrenheit_to_celsius_factor(fahrenheit):
+def FAHRENHEIT_TO_CELSIUS_FACTOR(fahrenheit):
     return (fahrenheit - 32) * 5/9
 
-def celsius_to_fahrenheit_factor(celsius):
+def CELSIUS_TO_FAHRENHEIT_FACTOR(celsius):
     return (celsius * 9/5) + 32
 
 def main():
@@ -9,11 +9,11 @@ def main():
     choice = input("Convert from (1) Fahrenheit to Celsius or (2) Celsius to Fahrenheit? Enter 1 or 2: ").strip()
     if choice == '1':
         fahrenheit = float(input("Enter the temperature to convert in Fahrenheit: "))
-        celsius = fahrenheit_to_celsius_factor(fahrenheit)
+        celsius = FAHRENHEIT_TO_CELSIUS_FACTOR(fahrenheit)
         print(f"{fahrenheit}°F is {celsius:.2f}°C")
     elif choice == '2':
         celsius = float(input("Enter the temperature to convert in Celsius: "))
-        fahrenheit = celsius_to_fahrenheit_factor(celsius)
+        fahrenheit = CELSIUS_TO_FAHRENHEIT_FACTOR(celsius)
         print(f"{celsius}°C is {fahrenheit:.2f}°F")
     else:
         print("Invalid choice. Please select 1 or 2.")
