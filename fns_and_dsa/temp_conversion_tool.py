@@ -9,17 +9,17 @@ def convert_to_fahrenheit(celsius):
 
 def main():
     print("Temperature Conversion Tool")
-    choice = input("Convert from (1) Fahrenheit to Celsius or (2) Celsius to Fahrenheit? Enter 1 or 2: ").strip()
-    if choice == '1':
+    choice = input("is the temperature in Fahrenheit or Celsius? (F/C): ").strip().upper()
+    if choice == 'F':
         fahrenheit = float(input("Enter the temperature to convert in Fahrenheit: "))
-        celsius = FAHRENHEIT_TO_CELSIUS_FACTOR(fahrenheit)
+        celsius = convert_to_celsius(fahrenheit)
         print(f"{fahrenheit}°F is {celsius:.2f}°C")
-    elif choice == '2':
+    elif choice == 'C':
         celsius = float(input("Enter the temperature to convert in Celsius: "))
-        fahrenheit = CELSIUS_TO_FAHRENHEIT_FACTOR(celsius)
+        fahrenheit = convert_to_fahrenheit(celsius)
         print(f"{celsius}°C is {fahrenheit:.2f}°F")
     else:
-        print("Invalid choice. Please select 1 or 2.")
+        print("Invalid choice. Please select F or C.")
 
 if __name__ == "__main__":
     main()
