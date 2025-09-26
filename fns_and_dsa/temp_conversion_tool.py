@@ -8,8 +8,8 @@ def convert_to_fahrenheit(celsius):
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 def main():
-    print("Temperature Conversion Tool")
-    choice = input("is the temperature in Fahrenheit or Celsius? (F/C): ").strip().upper()
+    print("Enter temperature to convert:")
+    choice = input("Is the temperature in Fahrenheit or Celsius? (F/C): ").strip().upper()
     if choice == 'F':
         fahrenheit = float(input("Enter the temperature to convert in Fahrenheit: "))
         celsius = convert_to_celsius(fahrenheit)
