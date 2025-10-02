@@ -1,8 +1,10 @@
 class BankAccount:
-    def __init__(self, account_number, account_holder, display_balance=0.0):
-        self.account_number = account_number
+    def __init__(self , initial_balance, account_holder, account_number, display_balance=0.0):
+        self.initial_balance = initial_balance
         self.account_holder = account_holder
+        self.account_number = account_number
         self.display_balance = display_balance
+
 
     def deposit(self, amount):
         if amount > 0:
@@ -21,20 +23,25 @@ class BankAccount:
 
    
 def main():
+    account = BankAccount(250.0, "John Doe", "123456789")
+    print(f"Account Holder: {account.account_holder}")
+    print(f"Account Number: {account.account_number}")
+    print(f"Initial Balance: {account.initial_balance}")
 
-    account = BankAccount("123456789", "John Doe", 1000.0)
-    account.display_balance()
+    if account.deposit(67.0):
+        print(f"Balance after deposit: {account.display_balance}")
+        account.display_balance()
+    else:
+        print("Deposit failed.")
 
-    print("Depositing $500...")
-    account.deposit(500)
-    account.display_balance()
+    if account.withdraw(100.0):
+        print(f"Balance after withdrawal: {account.display_balance}")
+        account.display_balance()
+    else:
+        print("Withdrawal failed.")
 
-    print("Withdrawing $200...")
-    account.withdraw(200)
-    account.display_balance()
-
-    print("Attempting to withdraw $2000...")
-    if not account.withdraw(2000):
-        print("Insufficient funds for this withdrawal.")
-    account.display_balance()
-   
+    if account.withdraw(500.0):
+        print(f"Balance after withdrawal: {account.display_balance}")
+        account.display_balance()
+    else:
+        print("Withdrawal failed.")
