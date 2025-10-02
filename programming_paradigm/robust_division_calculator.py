@@ -1,19 +1,8 @@
 def safe_divide(numerator, denominator):
     try:
-        result = numerator / denominator
+        result = float(numerator) / float(denominator)
     except ZeroDivisionError:
         return "Division by zero error"
+    except ValueError:
+        return "Invalid input: Please provide numeric values."
     return result
-
-try:
-    num = float(input("numerator: "))
-except ValueError:
-    print("Invalid input. Please enter a number.")
-    
-
-try:
-    denom = float(input("denominator: "))
-except ValueError:
-    print("Invalid input. Please enter a number.")
-    
-    
