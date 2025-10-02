@@ -6,10 +6,14 @@ def safe_divide(numerator, denominator):
     return result
 
 try:
-    numerator = float(input("numerator: "))
-    denominator = float(input("denominator: "))
-    result = safe_divide(numerator, denominator)
-    print("Result:", result)
+    num = float(input("numerator: "))
 except ValueError:
-    print("Invalid input. Please enter numeric values.")
+    print("Invalid input. Please enter a number.")
+    
 
+try:
+    denom = float(input("denominator: "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    
+    
