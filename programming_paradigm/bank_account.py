@@ -21,28 +21,20 @@ class BankAccount:
 
    
 def main():
-    import sys
-    account = BankAccount(100)
-    if len(sys.argv) < 2:
-        print("Usage: python main.py <command>:<amount>")
-        print("Commands: deposit, withdraw, display")
-        sys.exit(1)
 
-    command, *params = sys.argv[1].split(':')
-    amount = float(params[0]) if params else None
+    account = BankAccount("123456789", "John Doe", 1000.0)
+    account.display_balance()
 
-    if command == "deposit" and amount is not None:
-        account.deposit(amount)
-        print(f"Deposited: ${amount}")
-    elif command == "withdraw" and amount is not None:
-        if account.withdraw(amount):
-            print(f"Withdrew: ${amount}")
-        else:
-            print("Insufficient funds.")
-    elif command == "display":
-        account.display_balance()
-    else:
-        print("Invalid command.")
+    print("Depositing $500...")
+    account.deposit(500)
+    account.display_balance()
 
-if __name__ == "__main__":
-    main()
+    print("Withdrawing $200...")
+    account.withdraw(200)
+    account.display_balance()
+
+    print("Attempting to withdraw $2000...")
+    if not account.withdraw(2000):
+        print("Insufficient funds for this withdrawal.")
+    account.display_balance()
+   
