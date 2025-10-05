@@ -11,7 +11,7 @@ class Library:
     def add_book(self, book):
         self._books.append(book)
 
-    def checkout_book(self, book):
+    def check_out_book(self, book):
         if book in self._books and not book.is_checked_out:
             book.is_checked_out = True
             return True
