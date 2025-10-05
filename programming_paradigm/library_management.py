@@ -24,7 +24,5 @@ class Library:
         return False
        
 
-    def list_available_books(self, author):
-        return [book for book in self._books if book.author == author and not book.is_checked_out]
-
-    
+    def list_available_books(self):
+        return [book for book in self._books if not book.is_checked_out]
