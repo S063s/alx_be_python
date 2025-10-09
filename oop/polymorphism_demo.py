@@ -6,14 +6,14 @@ class Shape:
 
 class Rectangle(Shape):
     def __init__(self, width, length):
-        self.width = width
         self.length = length
+        self.width = width
 
     def area(self):
-        return self.width * self.length
+        return self.length * self.width
 
     def __str__(self):
-        return f"Rectangle(width={self.width}, length={self.length})"
+        return f"Rectangle(width={self.length}, length={self.width})"
 
 class Circle(Shape):
     def __init__(self, radius):
