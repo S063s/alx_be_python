@@ -4,9 +4,6 @@ class Book:
         self.author = author
         self.year = year
 
-    def get_summary(self):
-        return f"'{self.title}' by {self.author}, published in {self.year}."
-
         def __str__(self):
             return f"{self.title} by {self.author}, published in {self.year}"
 
