@@ -1,37 +1,24 @@
 class Calculator:
-    @staticmethod
-    def add(a, b):
-        return a + b
+   calculation_type = "Arithmetic Operations"
 
-    @staticmethod
-    def subtract(a, b):
-        return a - b
+   @staticmethod
+   def add(a, b):
+       return a + b
 
-    @classmethod
-    def multiply(cls, a, b):
-        return a * b
+   @classmethod
+   def subtract(cls, a, b):
+    print(f"Calculation type: {cls.calculation_type}")
+       return a - b
 
-    @classmethod
-    def divide(cls, a, b):
-        if b != 0:
-            return a / b
-        return "Division by zero error"
+   @classmethod
+   def multiply(cls, a, b):
+       print(f"Calculation type: {cls.calculation_type}")
+       return a * b
+        
 
-
-class CalculationType:
-    @staticmethod
-    def is_even(number):
-        return number % 2 == 0
-
-    @staticmethod
-    def is_odd(number):
-        return number % 2 != 0
-
-    @classmethod
-    def is_positive(cls, number):
-        return number > 0
-
-    @classmethod
-    def is_negative(cls, number):
-        return number < 0        
+   @classmethod
+   def divide(cls, a, b):
+       if b != 0:
+           return a / b
+       return "Division by zero error"
 
